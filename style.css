@@ -1,0 +1,40 @@
+:root{
+
+    --size-0: 0.25rem;
+    --size-1: 0.5rem;
+    --size-2: 0.75rem;
+    --size-3: 1rem;
+    --size-4: 1.5rem;
+    --size-5: 2rem;
+
+    --black: #000000;
+    --white: #FFFFFF;
+
+    --m-red: #FF0707;
+    --m-blue: #0081C3;
+    --m-yellow: #FFE501;
+    --m-dark-grey: #3D3D3D;
+
+    --k-blue-0: #63849F;
+    --k-blue-1: #16285A;
+    --k-blue-2: #80BFE7;
+    --k-yellow-0: #D1C07E;
+    --k-yellow-1: #CAB139;
+    --k-yellow-2: #C47405;
+    --k-pink-0: #8C879D;
+    --k-pink-1: #AB6E71;
+    --k-red: #8F271D;
+
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
+
+button{
+    svg {
+        width: var(--size-3);
+        height: var(--size-3);
+    }
+    }
