@@ -13,7 +13,9 @@
     --m-red: #FF0707;
     --m-blue: #0081C3;
     --m-yellow: #FFE501;
-    --m-dark-grey: #3D3D3D;
+    --m-dark-grey: #1d1d1d;
+
+    --m-boarder-stroke: var(--m-dark-grey) solid var(--size-1);
 
     --k-blue-0: #63849F;
     --k-blue-1: #16285A;
@@ -48,11 +50,69 @@ main{
         aspect-ratio: 1;
         width: 40%;
         height: auto;
-        
+
         /* center it */
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        #upper-half{
+            height: 80%;
+            background-color: var(--m-red);
+            border-block-end: var(--m-boarder-stroke);
+
+            display: grid;
+            grid-template-rows: 1fr 4fr;
+            grid-template-areas: "a a a a a a a"
+                               "b c c c c c c";
+
+            #area-a{
+                grid-area: a;
+                display: grid;
+                grid-template-areas: "a b c";
+                grid-template-columns: 2fr 3fr 3fr;
+                background-color: var(--white);
+                border-block-end: var(--m-boarder-stroke);
+                #a-1, #a-2, #a-3{
+                    border-inline-end: var(--m-boarder-stroke);
+                }
+                #a-1{
+                    grid-area: a;
+                }
+                #a-2{
+                    grid-area: b;
+                }
+                #a-3{
+                    grid-area: c;
+                    background-color: var(--m-yellow);
+                }
+            }
+
+            #area-b{
+                grid-area: b;
+                background-color: var(--white);
+                border-inline-end: var(--m-boarder-stroke);
+                display: grid;
+                grid-template-rows: 2fr 3fr;
+                grid-template-areas: "a"
+                                   "b";
+                #b-1{
+                    grid-area: a;
+                    border-block-end: var(--m-boarder-stroke);
+                }
+                #b-2{
+                    grid-area: b;
+                }
+            }
+
+            #area-c{
+                grid-area: c;
+            }
+        }
+        #lower-half{
+            height: 20%;
+            background-color: var(--m-yellow);
+        }
     }
 }
 
