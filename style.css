@@ -30,6 +30,7 @@
 body{
     width: 100vw;
     height: 100vh;
+    background-color: var(--black);
 }
 
 main{
@@ -39,22 +40,58 @@ main{
         width: 100vw;
         height: 100vh;
 
+        aspect-ratio: 1;
+        width: 75%;
+        height: auto;
+         top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+               
+        @media (width > 700px) {
+            width: 40%;
+        }
     }
 
     #kandinsky {
-        background-color: var(--black);
+        z-index: 2;
+        
+        pointer-events: none;
+        div{
+            position: absolute;
+            width: var(--size-4);
+            height: var(--size-4);
+            border-radius: 100%;
+            background-color: #71af06;
+            aspect-ratio: 1;
+        }
+        #xlg-1{
+            z-index: 0;
+            top: 20%;
+            left: 10%;
+            width: 40%;
+            height: auto;
+            background-color: var(--k-blue-1);
+            filter: drop-shadow(1rem 1rem 0.2rem var(--white)) drop-shadow(1rem -1rem 0.2rem var(--white))
+                    drop-shadow(-1rem 1rem 0.2rem var(--white)) drop-shadow(-1rem -1rem 0.2rem var(--white));
+            
+        }
+        #xlg-2{
+            z-index: 1;
+            top: 23%;
+            left: 12%;
+            width: 25%;
+            height: auto;
+            background-color: var(--black);
+            filter: drop-shadow(0.1rem 0.1rem 0.2rem var(--k-blue-0));
+        }
+
     }
 
     #mondrian {
-        background-color: var(--m-yellow);
-        aspect-ratio: 1;
-        width: 40%;
-        height: auto;
+        background-color: transparent;
 
-        /* center it */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+       
 
         border: var(--white) solid var(--size-2);
 
@@ -66,7 +103,6 @@ main{
 
         #right-strip{
             grid-area:right-strip;
-            background-color: var(--white);
             display: grid;
             grid-template-rows: 5fr 2fr;
             #right-white{
@@ -95,10 +131,10 @@ main{
                 display: grid;
                 grid-template-areas: "a b c";
                 grid-template-columns: 2fr 3fr 3fr;
-                background-color: var(--white);
                 border-block-end: var(--m-border-stroke);
                 #a-1, #a-2, #a-3{
                     border-inline-end: var(--m-border-stroke);
+                    background-color: var(--white);
                 }
                 #a-1{
                     grid-area: a;
@@ -106,17 +142,23 @@ main{
                 #a-2{
                     grid-area: b;
                 }
+                #a-3{
+                    background-color: var(--m-yellow);
+                }
                 
             }
 
             #area-b{
                 grid-area: b;
-                background-color: var(--white);
                 border-inline-end: var(--m-border-stroke);
                 display: grid;
                 grid-template-rows: 2fr 3fr;
                 grid-template-areas: "a"
                                    "b";
+
+                #b-1, #b-2{
+                    background-color: var(--white);
+                }
                 #b-1{
                     grid-area: a;
                     border-block-end: var(--m-border-stroke);
@@ -162,7 +204,6 @@ main{
             }
                 #c-2{
                     grid-area: b;
-                    background-color: var(--white);
                     display: grid;
                     grid-template-areas: "a a"
                                         "b c"
@@ -171,14 +212,11 @@ main{
                     border-inline-end: var(--m-border-stroke);
                     #c-2-yellow{
                         grid-area: a;
-                        width: 100%;
-                        height: 100%;
                         background-color: var(--m-yellow);
                         border-block-end: var(--m-border-stroke);
                     }
-                    #c-2-white-l, #c-2-white-r{
-                        width: 100%;
-                        height: 100%;
+                    #c-2-white, #c-2-white-l, #c-2-white-r{
+                        background-color: var(--white);
                     }
                     #c-2-white-l{
                         grid-area: b;
@@ -230,7 +268,6 @@ main{
                     width: 100%;
                     height: 100%;
                     border-inline-end: var(--m-border-stroke);
-                    background-color: var(--white);
                     display: grid;
                     grid-template-rows: repeat(3, 1fr);
                     grid-template-columns: 1fr 2fr 4fr;
@@ -240,6 +277,9 @@ main{
                     #f-white-sm, #f-black, #f-blue, #f-white-lg{
                         width: 100%;
                         height: 100%;
+                    }
+                    #f-white-sm, #f-white-lg{
+                        background-color: var(--white);
                     }
     
                     #f-white-sm{
@@ -260,16 +300,24 @@ main{
                     }
                 }
         }
-        
-    }
 
-        
-        
+        div:hover{
+            opacity: 0;
+            transition: opacity 1s ease;
         }
-    
-    button{
-                svg {
-                    width: var(--size-3);
-                    height: var(--size-3);
-                }
+        
     }
+     
+        
+    button{
+        position: absolute;
+        inset-inline-end: var(--size-5);
+        inset-block-start: var(--size-5);
+            svg {
+                    width: var(--size-4);
+                    height: var(--size-4);
+                    fill: var(--white);
+                }
+        }
+    }
+    
