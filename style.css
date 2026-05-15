@@ -24,12 +24,36 @@
     --k-pink-0: #8C879D;
     --k-pink-1: #AB6E71;
     --k-red: #8F271D;
-
+}
+body{
+    width: 100vw;
+    height: 100vh;
 }
 
 main{
-    width: 100vw;
-    height: 100vh;
+
+    #kandinsky, #mondrian {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    #kandinsky {
+        background-color: var(--black);
+    }
+
+    #mondrian {
+        background-color: var(--m-yellow);
+        aspect-ratio: 1;
+        width: 40%;
+        height: auto;
+        
+        /* center it */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 button{
@@ -37,4 +61,4 @@ button{
         width: var(--size-3);
         height: var(--size-3);
     }
-    }
+}
