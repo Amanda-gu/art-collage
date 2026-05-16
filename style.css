@@ -35,7 +35,7 @@ body{
 
 main{
 
-     #container{
+    #container{
         position: absolute;
         width: 100%;
         height: auto;
@@ -71,7 +71,27 @@ main{
             font-size: var(--size-4);
 
         }
-     }
+    }
+
+    button{
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.7;
+            transition: opacity 300ms ease;
+        }
+    }
+
+    #about{
+        position: absolute;
+        inset-inline-end: var(--size-5);
+        inset-block-start: var(--size-5);
+            svg {
+                    width: var(--size-4);
+                    height: var(--size-4);
+                    fill: var(--white);
+                }
+        }
 
     #kandinsky {
         z-index: -1;
@@ -456,21 +476,11 @@ main{
         }
         
         div:hover{
-            opacity: 0.5;
+            opacity: 0.3;
             transition: opacity 300ms ease;
         }
         
     }
   
-    #about{
-        position: absolute;
-        inset-inline-end: var(--size-5);
-        inset-block-start: var(--size-5);
-            svg {
-                    width: var(--size-4);
-                    height: var(--size-4);
-                    fill: var(--white);
-                }
-        }
     }
 
