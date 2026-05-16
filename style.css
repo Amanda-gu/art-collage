@@ -366,6 +366,7 @@ main{
                 display: grid;
                 grid-template-areas: "d e e f f f f"
                                    "d e e f f f f";
+                                   
     
                 #area-d{
                     grid-area: d;
@@ -427,6 +428,11 @@ main{
                         grid-area: b;
                     }
                 }
+        }
+        div{
+            &.show{
+            opacity: 0;
+         }
         }
         
         div:hover{
