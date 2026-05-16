@@ -41,14 +41,13 @@ body{
 main{
 
     #container{
-        overflow-y: hidden;
         position: absolute;
         width: 80%;
         height: auto;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        @media (width > 800px) {
+        @media (width > 700px) {
             width: 60%;
         }
         @media (width > 1000px) {
