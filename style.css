@@ -32,7 +32,6 @@
 body{
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
     background-color: var(--k-black);
     text-wrap: pretty;
     text-align: center;
@@ -41,8 +40,8 @@ body{
 
 main{
 
-
     #container{
+        overflow-y: hidden;
         position: absolute;
         width: 80%;
         height: auto;
