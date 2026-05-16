@@ -6,7 +6,7 @@
     --size-3: 1rem;
     --size-4: 1.5rem;
     --size-5: 2rem;
-    --size-6: 4rem;
+    --size-6: 3rem;
 
     --black: #171613;
     --white: #FFFFFF;
@@ -27,11 +27,12 @@
     --k-pink-0: #8C879D;
     --k-pink-1: #AB6E71;
     --k-red: #8F271D;
+    --k-black: #272727;
 }
 body{
     width: 100vw;
     height: 100vh;
-    background-color: var(--black);
+    background-color: var(--k-black);
     text-wrap: pretty;
     text-align: center;
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -124,7 +125,7 @@ main{
         transform: translate(-50%, -50%);
         aspect-ratio: 1;
         padding: var(--size-5);
-        
+        border: var(--m-border-stroke);
 
         display: none;
         flex-direction: column;
